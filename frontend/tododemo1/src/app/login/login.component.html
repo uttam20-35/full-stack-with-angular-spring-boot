@@ -1,0 +1,9 @@
+<small *ngIf ='invalidLogin'>{{errorMessage}}</small>
+
+Username : <input type="text" name="username" [(ngModel)] ="username"/>
+Password : <input type="password" name="password" [(ngModel)]="password"/>
+<br>
+<!-- Data Binding Elements 1)interpolation 2)Event Binding 3)Two way data Binding -->
+<!-- Username: {{username}}   -->
+<br>
+<button (click)=handleLogin()>Login</button>    
