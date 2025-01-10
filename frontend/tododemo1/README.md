@@ -57,3 +57,11 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+Learning with angular features:
+-Angular modules are where @NgModule is present and all .ts files are typescript modules.
+-Bootstrapping Angular Application: main.ts file having authority to bootstraping the app, also in app.module.ts file it present, then into index.html <approot> rendors.
+
+|ANGULAR APPLICATION ----- are nothing but a---------> ANGULAR MODULES ------are nothing but a---------------> ANGULAR COMPONENTS|
+
