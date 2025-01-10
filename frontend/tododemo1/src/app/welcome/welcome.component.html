@@ -1,7 +1,10 @@
-<div>Welcome {{name}}, 
-
-Welcome to our APP
-</div>
-<div>
-You can manage your todos <a routerLink="/todos">here</a>
-</div>
+<div class="welcome-container">
+    <div class="welcome-message">
+      <h1>Welcome, <span class="username">{{ name }}</span>!</h1>
+      <p>Welcome to our <span class="app-name">Awesome App</span> 🌟</p>
+    </div>
+    <div class="todo-link">
+      <p>You can manage your todos <a routerLink="/todos" class="link">here</a>.</p>
+    </div>
+  </div>
+  

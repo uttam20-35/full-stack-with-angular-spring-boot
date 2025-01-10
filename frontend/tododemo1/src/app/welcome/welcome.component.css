@@ -1,0 +1,65 @@
+/* Container */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Welcome Message */
+  .welcome-message h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .welcome-message .username {
+    color: #ff7e67;
+    font-style: italic;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .welcome-message .app-name {
+    font-weight: bold;
+    color: #ff7e67;
+  }
+  
+  /* Link Section */
+  .todo-link p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .todo-link .link {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  .todo-link .link:hover {
+    color: #ff7e67;
+    border-bottom: 2px solid #ff7e67;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
