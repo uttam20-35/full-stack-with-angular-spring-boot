@@ -1,4 +1,4 @@
-<div class="form-container">
+<!-- <div class="form-container">
     <div *ngIf="invalidLogin" class="error-message">
       <small>{{ errorMessage }}</small>
     </div>
@@ -11,4 +11,19 @@
   
     <button (click)="handleLogin()" class="login-button">Login</button>
   </div>
+   -->
+   <body style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+   <div class="form-container">
+    <div *ngIf="invalidLogin" class="error-message">
+      <small>{{ errorMessage }}</small>
+    </div>
   
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="username" class="input-field" />
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" class="input-field" />
+  
+    <button (click)="handleLogin()" class="login-button">Login</button>
+  </div>
+  </body>

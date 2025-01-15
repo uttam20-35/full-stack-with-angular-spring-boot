@@ -1,80 +1,79 @@
-/* Body Styling */
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;              /* Flexbox for centering */
-    justify-content: center;    /* Centers content horizontally */
-    align-items: center;        /* Centers content vertically */
-    background: linear-gradient(135deg, #74ebd5, #acb6e5);
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Form Container */
-  .form-container {
-    width: 350px;
-    padding: 30px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    text-align: center;
-  }
-  
-  /* Error Message */
-  .error-message {
-    background-color: rgba(255, 0, 0, 0.1);
-    color: #d9534f;
-    border: 1px solid rgba(255, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-  
-  /* Labels */
-  label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #555;
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-  }
-  
-  /* Input Fields */
-  .input-field {
-    width: 100%;
-    padding: 12px 15px;
-    margin: 15px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .input-field:focus {
-    border-color: #74ebd5;
-    box-shadow: 0 0 8px rgba(116, 235, 213, 0.5);
-    outline: none;
-  }
-  
-  /* Login Button */
-  .login-button {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(90deg, #74ebd5, #acb6e5);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.4s ease-in-out;
-  }
-  
-  .login-button:hover {
-    background: linear-gradient(90deg, #acb6e5, #74ebd5);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
+/* Ensure html and body take full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;              /* Flexbox for centering */
+  justify-content: center;    /* Center content horizontally */
+  align-items: center;        /* Center content vertically */
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Form Container */
+.form-container {
+  width: 350px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* Error Message */
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #d9534f;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-field:focus {
+  border-color: #74ebd5;
+  box-shadow: 0 0 8px rgba(116, 235, 213, 0.5);
+  outline: none;
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #74ebd5, #acb6e5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.login-button:hover {
+  background: linear-gradient(90deg, #acb6e5, #74ebd5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
