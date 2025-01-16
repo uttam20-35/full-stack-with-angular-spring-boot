@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ErrorComponent } from './error/error.component';
 import { ListToDoComponent } from './list-to-do/list-to-do.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   {path:'', component: LoginComponent},
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path:'welcome', component: WelcomeComponent},
   {path:'welcome/:name', component: WelcomeComponent},
   {path:'todos', component: ListToDoComponent},
+  {path:'logout', component: LogoutComponent},
   {path:'**', component: ErrorComponent}
 ];
   
