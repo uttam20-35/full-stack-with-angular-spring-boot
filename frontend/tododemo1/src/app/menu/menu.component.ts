@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -8,18 +7,6 @@ import { HardcodedAuthenticationService } from '../service/hardcoded-authenticat
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
-export class MenuComponent implements OnInit {
-  
-  isUserLoggedIn: boolean =false;
-  
-  constructor(public hardcodedAuthenticationService: HardcodedAuthenticationService){}
-  
-  ngOnInit(): void {
+export class MenuComponent {
 
-    // this.isUserLoggedIn= this.hardcodedAuthenticationService.isUserLoggedIn();
-
-    // throw new Error('Method not implemented.');
-  }
-
-  
 }
