@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, GuardResult, MaybeAsync, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, GuardResult, MaybeAsync, Router, RouterStateSnapshot } from '@angular/router';
 import { HardcodedAuthenticationService } from './hardcoded-authentication.service';
 
 @Injectable({
@@ -7,12 +7,16 @@ import { HardcodedAuthenticationService } from './hardcoded-authentication.servi
 })
 export class RouteGuardService implements CanActivate {
 
-  constructor(private hardcodedAuthenticationService: HardcodedAuthenticationService) { }
+  constructor
+  (private hardcodedAuthenticationService: HardcodedAuthenticationService,
+    private router:Router) { }
   
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): MaybeAsync<GuardResult> {
+    console.log('log out clicked')
     if(this.hardcodedAuthenticationService.isUserLoggedIn())
       return true;
-
-    throw new Error('Method not implemented.');
+    this.router.navigate(['login'])
+    return false;
+    // throw new Error('Method not implemented.');
   }
 }
