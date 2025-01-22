@@ -3,8 +3,21 @@
       <h1>Welcome, <span class="username">{{ name }}</span>!</h1>
       <p>Welcome to our <span class="app-name">Awesome App</span> 🌟</p>
     </div>
+
     <div class="todo-link">
       <p>You can manage your todos <a routerLink="/todos" class="link">here</a>.</p>
     </div>
+
+    <div class="container">
+      Click here to get customize  welcome-message
+      <button (click)="getWelcomeMessage()" class="btn btn-success">Get Welcome Message</button>
+    </div>
+
+    <br>
+    <div>
+      <h2>Your customize welcome message:</h2>
+      {{ welcomeMsgFromService }}
+    </div>
+
   </div>
   

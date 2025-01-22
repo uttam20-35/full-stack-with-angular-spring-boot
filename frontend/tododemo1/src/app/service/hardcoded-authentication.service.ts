@@ -8,7 +8,7 @@ export class HardcodedAuthenticationService {
   constructor() { }
 
   authenticate(username: any, password: any){
-    // console.log('Before :'+this.isUserLoggedIn());
+    console.log('HardcodedAuthenticationService--->authenticate');
     if(username==="uttam" && password==="root"){
       sessionStorage.setItem('authenticateUser', username)
       // console.log('After :'+this.isUserLoggedIn());
@@ -21,11 +21,13 @@ export class HardcodedAuthenticationService {
   }
 
   isUserLoggedIn(){
+    console.log('HardcodedAuthenticationService--->isUserLoggedIn')
     let user= sessionStorage.getItem('authenticateUser')
     return !(user===null)
   }
 
   logout(){
+    console.log('HardcodedAuthenticationService--->logout')
     sessionStorage.removeItem('authenticateUser')
   }
 

@@ -12,7 +12,7 @@ export class RouteGuardService implements CanActivate {
     private router:Router) { }
   
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): MaybeAsync<GuardResult> {
-    console.log('log out clicked')
+    console.log('RouteGuardService---->canActivate ,log out clicked')
     if(this.hardcodedAuthenticationService.isUserLoggedIn())
       return true;
     this.router.navigate(['login'])
