@@ -5,20 +5,9 @@ public class HelloWorldBean {
 
     private Integer num;
 
-    private HelloWorldBeanTwo helloWorldBeanTwo;
-
-    public HelloWorldBean(String message, Integer num, HelloWorldBeanTwo helloWorldBeanTwo) {
-        this.message = message;
+    public HelloWorldBean(Integer num, String message) {
         this.num = num;
-        this.helloWorldBeanTwo = helloWorldBeanTwo;
-    }
-
-    public HelloWorldBeanTwo getHelloWorldBeanTwo() {
-        return helloWorldBeanTwo;
-    }
-
-    public void setHelloWorldBeanTwo(HelloWorldBeanTwo helloWorldBeanTwo) {
-        this.helloWorldBeanTwo = helloWorldBeanTwo;
+        this.message = message;
     }
 
     public HelloWorldBean(String message) {
@@ -40,10 +29,5 @@ public class HelloWorldBean {
     public void setNum(Integer num) {
         this.num = num;
     }
-//    @Override
-//    public String toString() {
-//        return "HelloWorldBean{" +
-//                "message='" + message + '\'' +
-//                '}';
-//    }
+
 }

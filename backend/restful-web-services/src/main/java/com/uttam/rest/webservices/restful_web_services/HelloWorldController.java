@@ -22,8 +22,7 @@ public class HelloWorldController {
     @GetMapping("/helloBean")
     public HelloWorldBean helloWorldBean(){
         System.out.println("2nd");
-        return new HelloWorldBean("Hello World",222,
-                                     new HelloWorldBeanTwo("uttam",555));
+        return new HelloWorldBean(222,"Hello World");
     }
 
     @GetMapping("/helloBean/path-variable/{name}")
