@@ -15,16 +15,20 @@ public class HelloWorldController {
 //2nd way:    @GetMapping(path = "/hello")
 /*3rd way:*/@GetMapping("/hello")
     public String helloWorld(){
+        System.out.println("1st");
         return "hello World";
     }
 
     @GetMapping("/helloBean")
     public HelloWorldBean helloWorldBean(){
-        return new HelloWorldBean("Hello World");
+        System.out.println("2nd");
+        return new HelloWorldBean("Hello World",222,
+                                     new HelloWorldBeanTwo("uttam",555));
     }
 
     @GetMapping("/helloBean/path-variable/{name}")
     public HelloWorldBean helloWorldPathVariable(@PathVariable String name){
+        System.out.println("3rd");
         return new HelloWorldBean(String.format("Hello ,%s",name));
     }
 }

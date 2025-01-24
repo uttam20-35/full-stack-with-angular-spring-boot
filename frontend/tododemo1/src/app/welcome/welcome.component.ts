@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { WelcomeDataService } from '../service/data/welcome-data.service';
+import { HelloWorldBean, WelcomeDataService } from '../service/data/welcome-data.service';
 
 @Component({
   selector: 'app-welcome',
@@ -14,6 +14,9 @@ export class WelcomeComponent {
   message ='Some welcome works in variable'
   welcomeMsgFromService =''
   name=''
+
+  welcomeNumFromService: number | undefined;
+  // welcomeObjFromService: any;
   
   //Activated Route
   constructor(private route: ActivatedRoute,
@@ -30,13 +33,15 @@ export class WelcomeComponent {
     // console.log(this.service.executeHelloWorldBeanService());
 
     this.service.executeHelloWorldBeanService().subscribe(
-      response =>  console.log(response.message)
+      response =>  this.handleSuccessfulResponse(response)
     );
     console.log('last line of getmessage')
   }
 
-  handleSuccessfulResponse(response: any){
+  handleSuccessfulResponse(response: HelloWorldBean){
     console.log('response is : ',response)
     this.welcomeMsgFromService = response.message;
+    this.welcomeNumFromService =response.num;
+    // this.welcomeObjFromService =response.helloBeanTwo;
   }
 }
