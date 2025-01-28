@@ -1,5 +1,5 @@
 /* Container */
-/* .welcome-container {
+ .welcome-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,26 +14,26 @@
   }
   
   /* Welcome Message */
-  /* .welcome-message h1 {
+   .welcome-message h1 {
     font-size: 2.5rem;
     color: #007bff;
     margin: 10px 0;
     font-weight: bold;
-  } */
+  } 
   
-  /* .welcome-message .username {
+  .welcome-message .username {
     color: #ff7e67;
     font-style: italic;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  } */
+  }
   
-  /* .welcome-message .app-name {
+  .welcome-message .app-name {
     font-weight: bold;
     color: #ff7e67;
   }
-   */
+  
   /* Link Section */
-  /* .todo-link p {
+  .todo-link p {
     font-size: 1.2rem;
     margin-top: 20px;
   }
@@ -49,10 +49,10 @@
   .todo-link .link:hover {
     color: #ff7e67;
     border-bottom: 2px solid #ff7e67;
-  } */
+  }
    
   /* Animation */
-  /* @keyframes fadeIn {
+  @keyframes fadeIn {
     from {
       opacity: 0;
       transform: translateY(-20px);
@@ -62,4 +62,3 @@
       transform: translateY(0);
     }
   }
-   */
