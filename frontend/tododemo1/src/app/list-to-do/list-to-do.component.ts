@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { TodoDataService } from '../service/data/todo-data.service';
 
 
 export class Todo{
   constructor(
     public id: number,
-    public desc: string,
-    public done: boolean,
-    public targetDate: Date
+    public username: string,
+    public description: string,
+    public targetDate: Date,
+    public done: boolean
+    
   ){}
 }
 
@@ -19,18 +22,49 @@ export class Todo{
 })
 export class ListToDoComponent {
 
-  todos=[
-    new Todo(1,'Learn to Code', false,new Date()),
-    new Todo(2,'Learn to Code', false,new Date()),
-    new Todo(3,'Learn to Code', false,new Date()),
-    new Todo(4,'Learn to Code', false,new Date())
-    // {id:1,desc:'learn to code'},
-    // {id:2,desc:'learn to java'},
-    // {id:3,desc:'learn to python'}
-  ]
+  todos: Todo[] | undefined 
+    // =[
+    //   new Todo(1,'Learn to Code', false,new Date()),
+    //   new Todo(2,'Learn to Code', false,new Date()),
+    //   new Todo(3,'Learn to Code', false,new Date()),
+    //   new Todo(4,'Learn to Code', false,new Date())
+    //   // {id:1,desc:'learn to code'},
+    //   // {id:2,desc:'learn to java'},
+    //   // {id:3,desc:'learn to python'}
+    // ]
+    // todo ={
+    //   id:1,
+    //   description:'Learn to code'
+    // }
+    
+  // =[
+  //   new Todo(1,'Learn to Code', false,new Date()),
+  //   new Todo(2,'Learn to Code', false,new Date()),
+  //   new Todo(3,'Learn to Code', false,new Date()),
+  //   new Todo(4,'Learn to Code', false,new Date())
+  //   // {id:1,desc:'learn to code'},
+  //   // {id:2,desc:'learn to java'},
+  //   // {id:3,desc:'learn to python'}
+  // ]
 
   // todo ={
   //   id:1,
   //   description:'Learn to code'
   // }
+
+  constructor(
+    private todoService:TodoDataService
+  ){}
+
+  ngOnInit(){
+    this.todoService.retrieveAllTodos('uttam').subscribe(
+      (response: Todo[])  => {
+        this.todos = response;
+        // console.log('1st :',response);
+        // console.log(response[0].done);
+        // console.log('2st :',response[1].username);
+        // console.log('3rd :',response[2].done);
+      }
+    )
+  }
 }

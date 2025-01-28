@@ -1,4 +1,4 @@
-package com.uttam.rest.webservices.restful_web_services;
+package com.uttam.rest.webservices.restful_web_services.hello;
 
 public class HelloWorldBean {
     private String message;

@@ -1,4 +1,4 @@
-package com.uttam.rest.webservices.restful_web_services;
+package com.uttam.rest.webservices.restful_web_services.hello;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +22,7 @@ public class HelloWorldController {
     @GetMapping("/helloBean")
     public HelloWorldBean helloWorldBean(){
         System.out.println("2nd");
+//        throw new RuntimeException("Something error happened");
         return new HelloWorldBean(222,"Hello World");
     }
 
