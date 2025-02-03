@@ -1,6 +1,7 @@
 package com.uttam.rest.webservices.restful_web_services.todo;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class ToDo {
     private Long id;
@@ -55,5 +56,18 @@ public class ToDo {
 
     public void setDone(Boolean done) {
         isDone = done;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ToDo toDo = (ToDo) o;
+        return Objects.equals(id, toDo.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }

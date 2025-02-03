@@ -23,4 +23,23 @@ public class ToDoHardcodedService {
                 + " " + todo.getDescription() + " " + todo.getDone() + " " + todo.getTargetDate()));
         return todos;
     }
+
+    public ToDo deleteById(Long id){
+        ToDo todo = findById(id);
+        if(todo ==null) return null;
+
+        if(todos.remove(todo)){
+            return todo;
+        }
+        return null;
+    }
+
+    public ToDo findById(Long id) {
+        for (ToDo todo:todos){
+            if(todo.getId() == id){
+                return todo;
+            }
+        }
+        return null;
+    }
 }
