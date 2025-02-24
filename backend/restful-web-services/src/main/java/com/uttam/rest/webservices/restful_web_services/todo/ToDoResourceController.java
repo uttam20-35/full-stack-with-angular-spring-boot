@@ -19,6 +19,11 @@ public class ToDoResourceController {
         return toDoHardcodedService.findAll();
     }
 
+    @GetMapping("/users/{username}/todos/{id}")
+    public ToDo getTodoById(@PathVariable String username,@PathVariable Long id){
+        return toDoHardcodedService.findById(id);
+    }
+
     @DeleteMapping("/users/{username}/todos/{id}")
     public ResponseEntity<Void> deleteToDo(@PathVariable String username,@PathVariable Long id){
        ToDo todo= toDoHardcodedService.deleteById(id);

@@ -16,7 +16,7 @@ public class HelloWorldController {
 /*3rd way:*/@GetMapping("/hello")
     public String helloWorld(){
         System.out.println("1st");
-        return "hello World";
+        return "hello world";
     }
 
     @GetMapping("/helloBean")

@@ -23,7 +23,7 @@
         <td>{{ todo.description }}</td>
         <td>{{ todo.done }}</td>
         <td>{{ todo.targetDate | date | uppercase}}</td>
-        <td><button (click)='deleteToDo(todo.id)'>Delete</button></td>
+        <td><button (click)='deleteToDo(todo.id)'>Delete</button> <button (click)="updateToDo(todo.id)">Update</button> </td>
       </tr>
     </tbody>
   </table>

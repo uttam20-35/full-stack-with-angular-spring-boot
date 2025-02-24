@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { TodoDataService } from '../service/data/todo-data.service';
-
+import { Router } from '@angular/router';
 
 export class Todo{
   constructor(
     public id: number,
-    public username: string,
+    // public username: string,
     public description: string,
     public targetDate: Date,
     public done: boolean
@@ -29,7 +29,8 @@ export class ListToDoComponent {
   //{id:2,desc:'learn to java'},{id:3,desc:'learn to python'}] todo ={id:1,description:'Learn to code'}
 
   constructor(
-    private todoService:TodoDataService
+    private todoService:TodoDataService,
+    private router: Router
   ){}
 
   ngOnInit(){
@@ -49,5 +50,11 @@ export class ListToDoComponent {
         this.message=`Delete of ToDo  ${id} successful`
       }
     )
+  }
+
+  updateToDo(id:number){
+    console.log(`update ${id}`)
+    this.router.navigate(['todos',id])
+    
   }
 }
