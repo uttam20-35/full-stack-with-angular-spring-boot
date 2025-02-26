@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoDataService } from '../service/data/todo-data.service';
 import { Todo } from '../list-to-do/list-to-do.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-updatedtodo',
@@ -17,7 +17,8 @@ export class UpdatedtodoComponent implements OnInit {
 
   constructor(
     private todoService : TodoDataService,
-    private route : ActivatedRoute
+    private route : ActivatedRoute,
+    private router :Router
   ){}
 
   ngOnInit() {
@@ -31,10 +32,13 @@ export class UpdatedtodoComponent implements OnInit {
   }
 
   saveTodo() {
-    
-    
-    
-   
+    this.todoService.updateToDo('uttam',this.id,this.todo).subscribe(
+      data =>{
+        console.log(data);    
+        this.router.navigate(['todos'])
+      }
+    )
+    {}
   throw new Error('Method not implemented.');
   }
 

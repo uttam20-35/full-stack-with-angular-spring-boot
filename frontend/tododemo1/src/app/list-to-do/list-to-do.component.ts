@@ -55,6 +55,5 @@ export class ListToDoComponent {
   updateToDo(id:number){
     console.log(`update ${id}`)
     this.router.navigate(['todos',id])
-    
   }
 }

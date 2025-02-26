@@ -23,4 +23,8 @@ export class TodoDataService {
   retrieveToDo(username:string,id: number){
     return this.http.get<Todo>(`http://localhost:1010/users/${username}/todos/${id}`)
   }
+
+  updateToDo(username :string, id: number, todo :object){
+    return this.http.put(`http://localhost:1010/users/${username}/todos/${id}`,todo)
+  }
 }

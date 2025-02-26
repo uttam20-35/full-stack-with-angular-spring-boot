@@ -1,0 +1,67 @@
+/* General Page Styling */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Container Styling */
+  .container {
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Fieldset Styling */
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  /* Label Styling */
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  
+  /* Input Styling */
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+  }
+  
+  input:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Button Styling */
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

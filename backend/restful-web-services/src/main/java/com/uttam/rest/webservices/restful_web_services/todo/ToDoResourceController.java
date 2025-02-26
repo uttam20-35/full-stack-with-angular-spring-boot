@@ -1,6 +1,7 @@
 package com.uttam.rest.webservices.restful_web_services.todo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,5 +33,13 @@ public class ToDoResourceController {
             return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
+    }
+
+    @PutMapping("/users/{username}/todos/{id}")
+    public ResponseEntity<ToDo> updateTodo(
+            @PathVariable String username,
+            @PathVariable Long id, @RequestBody ToDo toDo){
+        ToDo todoUpdated =toDoHardcodedService.save(toDo);
+        return new ResponseEntity<ToDo>(toDo, HttpStatus.OK);
     }
 }
